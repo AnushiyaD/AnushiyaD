@@ -12,11 +12,7 @@ console.log("running")
 })
 app.use(express.json());
 app.get('/demo',(req,res) =>{
-  //  var Name = req.body.Name
-  //  var Age =  req.body.Age
-  //  var Address = req.body.Address
-  //  var Aadharno = req.body.Aadharno;
-
+ 
    var Name = req.query.Name
    var Age =  req.query.Age
    var Address = req.query.Address
@@ -35,11 +31,5 @@ console.log(Name,Age,Address,Aadharno)
     var creditscore = {"score":500,"risklevel":"zero"}
     res.status(200).json(creditscore)
   }
-//   console.log(Name,Age,Address,Aadharno)
-  
-  // res.send({Name,Age,Address,Aadharno})
- 
-  //res.set('Content-Type', 'application/json')
-//   res.send(JSON.stringify({Name,Age,Address,Aadharno}))
   res.end()
 })
